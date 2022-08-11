@@ -1,0 +1,48 @@
+{
+  "extends": [
+    "config:base",
+    ":separateMultipleMajorReleases",
+    ":timezone(Asia/Tokyo)",
+    ":prHourlyLimitNone"
+  ],
+  "automergeSchedule": [
+    "after 11am and before 11pm every weekend"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "vulnerabilityAlerts": {
+    "labels": [
+      "security"
+    ],
+    "automerge": true
+  },
+  "pin": {
+    "automerge": true
+  },
+  "major": {
+    "addLabels": [
+      "UPDATE-MAJOR"
+    ],
+    "stabilityDays": 7
+  },
+  "minor": {
+    "stabilityDays": 5,
+    "automerge": true
+  },
+  "patch": {
+    "stabilityDays": 2,
+    "automerge": true
+  },
+  "pip_requirements": {
+    "fileMatch": [
+      "^requirements([-|_]?[a-z]*)\\.(txt|pip)$"
+    ]
+  },
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "postUpdateOptions": [
+    "yarnDedupeHighest"
+  ]
+}
