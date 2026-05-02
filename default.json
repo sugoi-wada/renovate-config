@@ -8,6 +8,7 @@
   "automergeSchedule": [
     "after 11am and before 11pm every weekend"
   ],
+  "platformAutomerge": true,
   "labels": [
     "dependencies"
   ],
