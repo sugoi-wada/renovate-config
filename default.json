@@ -22,6 +22,15 @@
   "pin": {
     "automerge": true
   },
+  "packageRules": [
+    {
+      "description": "GitHub Actions はタグではなくコミット SHA で固定する（タグ付け替えによるサプライチェーン汚染対策）。バージョンはコメントとして併記され、更新は通常のルールに従う。",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "pinDigests": true
+    }
+  ],
   "major": {
     "addLabels": [
       "UPDATE-MAJOR"
