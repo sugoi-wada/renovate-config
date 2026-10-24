@@ -1,4 +1,5 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:base",
     ":separateMultipleMajorReleases",
@@ -8,7 +9,7 @@
   "automergeSchedule": [
     "after 11am and before 11pm every weekend"
   ],
-  "platformAutomerge": true,
+  "platformAutomerge": false,
   "labels": [
     "dependencies"
   ],
